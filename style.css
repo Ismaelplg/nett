@@ -1,0 +1,403 @@
+:root {
+   /* background */
+   --backgroundPrimary: #ffffff;
+   --backgroundSecondary: #f3f3f3;
+   /* typo */
+   --headline: #000000;
+   --body: #3e3c3c;
+   --subtitle: #555555;
+   /* accent */
+   --brown: #b29966;
+   --green: #339e88;
+   --yellow: #fae125;
+   --red: #f25d58;
+   --blue: #84d7e6;
+   --purple: #b1b3db;
+}
+
+body {
+   height: 100vh;
+   width: 100%;
+
+   font-family: "Playfair Display", serif;
+   font-family: "Raleway", sans-serif;
+
+   background-color: var(--backgroundSecondary);
+
+   box-sizing: border-box;
+   overflow-x: hidden;
+}
+/* HEADER */
+header {
+   width: auto;
+   height: 200px;
+
+   border-bottom: 1px solid var(--brown);
+   background-color: var(--backgroundSecondary);
+
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+}
+
+header div {
+   display: flex;
+   align-items: center;
+}
+
+header h5 {
+   color: var(--headline);
+   font-size: 18px;
+
+   padding-left: 50px;
+}
+
+header a {
+   color: var(--subtitle);
+   padding-left: 15px;
+}
+
+#search {
+   margin-top: 8px;
+}
+
+/* NAVIGATION BAR */
+
+nav {
+   width: auto;
+   height: 100px;
+
+   box-shadow: 0 4px 5px -2px rgba(128, 128, 128, 0.233);
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+nav a {
+   text-decoration: none;
+   font-size: 16px;
+   color: var(--headline);
+   position: relative;
+
+   margin: 20px;
+}
+
+nav a:after {
+   content: "";
+   position: absolute;
+   width: 100%;
+   transform: scaleX(0);
+   height: 2px;
+   top: 20px;
+   left: 0;
+   background-color: var(--brown);
+   transform-origin: bottom right;
+   transition: transform 0.25s ease-out;
+}
+
+nav a:hover:after {
+   transform: scaleX(1);
+   transform-origin: bottom left;
+}
+
+/* MAIN */
+
+main {
+   width: 80%;
+   margin: 0 auto;
+
+   box-shadow: 0 5px 5px rgb(223, 221, 221);
+
+   background-color: var(--backgroundSecondary);
+}
+
+/* 1ST SECTION */
+
+.first {
+   height: 400px;
+   width: 100%;
+   display: flex;
+   position: relative;
+
+   margin: 5px auto;
+
+   background-color: var(--backgroundSecondary);
+}
+
+.first div:nth-child(1) {
+   height: 100%;
+   width: 50%;
+
+   display: flex;
+   align-items: center;
+
+   background-color: var(--backgroundSecondary);
+}
+
+.first h2 {
+   font-family: "Raleway", sans-serif;
+   font-size: 48px;
+   font-weight: 700;
+
+   padding: 40px;
+}
+
+.first div:nth-child(3) {
+   height: 100%;
+   width: 50%;
+
+   background-color: red;
+   background-image: url(/images/dif.png);
+   background-size: cover;
+   background-position: center;
+}
+
+.firstImg {
+   height: 100%;
+   width: 100%;
+}
+
+.mask::before {
+   content: "";
+   height: 400px;
+   width: 70px;
+   clip-path: polygon(25% 0, 75% 0, 50% 100%, 0 100%);
+   position: absolute;
+
+   left: 48%;
+
+   background-color: var(--green);
+}
+
+/* 2ND SECTION */
+
+.second {
+   height: 500px;
+   width: 100%;
+
+   background-color: var(--backgroundSecondary);
+
+   display: flex;
+   align-items: center;
+}
+
+.second div:nth-child(1) {
+   height: 300px;
+   width: 40%;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   background-color: var(--backgroundSecondary);
+}
+
+.secondImg {
+   height: 300px;
+   width: 500px;
+
+   margin-left: 120px;
+   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.second div:nth-child(2) {
+   height: 300px;
+   width: 50%;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.second div p:nth-child(1) {
+   font-family: "Raleway", sans-serif;
+   font-size: 24px;
+   font-weight: 700;
+   line-height: 31px;
+   padding: 30px;
+}
+
+.second div p:nth-child(2) {
+   font-family: "Raleway", sans-serif;
+   font-size: 18px;
+   font-weight: 500;
+   line-height: 30px;
+   padding: 0 50px;
+   text-align: justify;
+}
+
+/* 3RD SECTION */
+
+.third {
+   height: 500px;
+   width: 100%;
+
+   display: flex;
+
+   background-color: var(--backgroundSecondary);
+}
+
+.thirdText {
+   height: 500px;
+   width: 60%;
+
+   display: flex;
+   flex-direction: column;
+
+   gap: 10px;
+   padding: 0 40px;
+}
+
+.thirdText h3 {
+   font-family: "Playfair Display", serif;
+   font-weight: 500;
+   font-size: 36px;
+
+   text-align: right;
+   align-self: flex-start;
+}
+
+.red {
+   height: 30px;
+   width: 34px;
+}
+
+.thirdImg {
+   height: 500px;
+   width: 40%;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.thirdImg img {
+   height: 80%;
+   width: 60%;
+}
+
+.thirdText div {
+   display: flex;
+   flex-wrap: wrap;
+
+   margin-top: 30px;
+   padding: 0 50px;
+   align-items: center;
+}
+
+.thirdText div h5 {
+   font-weight: 700;
+   font-size: 18px;
+
+   width: 70%;
+}
+
+.thirdText div p {
+   font-weight: 500;
+   font-size: 18px;
+   line-height: 30px;
+
+   padding: 0 50px;
+}
+
+/* FOOTER */
+
+footer {
+   width: 80%;
+   height: 250px;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   margin: 0 auto;
+   background-color: var(--body);
+}
+
+.footerContainer {
+   width: 80%;
+   height: 50%;
+   display: flex;
+
+   border-bottom: 1px solid white;
+}
+
+.footerContainer img {
+   height: 77px;
+   width: 88px;
+   align-self: center;
+}
+
+.footerContainer div {
+   width: 100%;
+   display: flex;
+}
+.footerContainer h2 {
+   color: var(--brown);
+   align-self: self-end;
+   margin-bottom: 20px;
+}
+
+.frst {
+   font-weight: 700;
+}
+
+.scnd {
+   font-family: "Playfair Display", serif;
+   font-weight: 100;
+}
+
+.footerContainer div:nth-child(2) {
+   display: flex;
+   align-items: flex-end;
+   justify-content: end;
+   margin-bottom: 20px;
+   font-size: 12px;
+   font-weight: 700;
+   color: var(--backgroundPrimary);
+   gap: 20px;
+}
+
+#facebook {
+   height: 25px;
+   width: 14px;
+}
+
+#twitter {
+   height: 22px;
+   width: 27px;
+}
+
+.terms {
+   display: flex;
+   justify-content: space-around;
+
+   margin-top: 20px;
+}
+
+.rights {
+   display: flex;
+
+   padding-right: 80px;
+}
+
+.rights p:nth-child(1) {
+   color: var(--backgroundPrimary);
+   font-weight: 500;
+   font-size: 14px;
+}
+
+.rights p:nth-child(2) {
+   color: var(--backgroundPrimary);
+   font-weight: 500;
+   font-family: "Playfair Display", serif;
+   font-size: 14px;
+}
+
+.privacy {
+   color: var(--backgroundPrimary);
+   font-family: "Playfair Display", serif;
+   font-size: 14px;
+}
